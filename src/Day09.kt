@@ -1,10 +1,9 @@
 class Cell(val x : Int, val y: Int, val d: Int) {
-
 }
 
 fun main() {
     fun board(input: List<String>): List<List<Cell>> {
-        val data = input.map{it.toCharArray().map{it.toString().toInt()}}
+        val data = input.map { it.map { it.digitToInt() } }
         val result = ArrayList<List<Cell>>()
         for ((i, r) in data.withIndex()) {
             val row = ArrayList<Cell>()
